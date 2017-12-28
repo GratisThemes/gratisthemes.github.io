@@ -13,7 +13,7 @@ gulp.task('jade', () => {
       locals: {},
       pretty: true
     }))
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('./'))
 })
 
 gulp.task('sass', () => {
@@ -22,23 +22,11 @@ gulp.task('sass', () => {
     .pipe(wait(500))
     .pipe(sass({ outputStyle: 'expanded', includePaths: ['scss'] }))
     .pipe(prefix(['last 30 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(gulp.dest('docs'))
-})
-
-
-
-gulp.task('other', () => {
-  gulp.src([
-    './source/**/*.*',
-    '!./source/jade/**/*.*', 
-    '!./source/scss/**/*.*'
-  ])
-    .pipe(plumber())
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('./'))
 })
 
 gulp.task('webserver', () => {
-  gulp.src('./docs')
+  gulp.src('./')
     .pipe(plumber())
     .pipe(webserver({
       livereload: true,
@@ -50,11 +38,6 @@ gulp.task('webserver', () => {
 gulp.task('watch', () => {
   gulp.watch('./source/jade/**/*.*', ['jade'])
   gulp.watch('./source/scss/**/*.*', ['sass'])
-  gulp.watch([
-    './source/**/*.*',
-    '!./source/jade/**/*.*', 
-    '!./source/scss/**/*.*'
-  ], ['other'])
 })
 
-gulp.task('default', ['watch', 'jade', 'sass', 'other', 'webserver'])
+gulp.task('default', ['watch', 'jade', 'sass', 'webserver'])
