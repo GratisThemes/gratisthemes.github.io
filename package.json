@@ -1,0 +1,28 @@
+{
+  "name": "gratisthemes.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GratisThemes/gratisthemes.github.io.git"
+  },
+  "author": "Gratis Themes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GratisThemes/gratisthemes.github.io/issues"
+  },
+  "homepage": "https://github.com/GratisThemes/gratisthemes.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-wait": "0.0.2",
+    "gulp-webserver": "^0.9.1"
+  }
+}

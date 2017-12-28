@@ -1,0 +1,52 @@
+extends _head.jade
+
+block content
+  .theme
+    h1 #{name}
+
+    if downloadURL != '#'
+      .theme-buttons
+        a(href="#{demoURL}" target="_blank") Demo
+        a(href="#{downloadURL}" target="_blank") Download
+    else
+      .theme-coming-soon Coming Soon
+
+    img(alt="#{slug}-screenshot" src="/images/#{slug}/big-screenshot.jpg")
+
+    ul.theme-details
+      each x, y in details
+        li
+          b #{y}:
+          span #{x}
+
+    .theme-features
+      .theme-feature
+        h3 Responsive
+
+        p.
+          All themes are made with mobile and desktop devices in mind
+          and will adjust seamlessly to any screen.
+
+      .theme-feature
+        img(alt="#{slug} devices" src="/images/#{slug}/devices.png")
+
+      .theme-feature
+        h3 Customizable
+
+        p.
+          #{name} features a variety of customizable options<br />
+          such as but not limited to
+
+        ul.options
+          each option in options
+            li= option
+
+      .theme-feature
+        img(src="/images/#{slug}/options.jpg" alt="#{slug} options")
+
+    if downloadURL != '#'
+      .theme-buttons
+        a(href="#{demoURL}" target="_blank") Demo
+        a(href="#{downloadURL}" target="_blank") Download
+    else
+      .theme-coming-soon Coming Soon
