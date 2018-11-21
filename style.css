@@ -1,6 +1,6 @@
 /*
   Gratis Themes website stylesheet
-  Version: 1.0.0
+  Version: 1.0.1
   Author: Gratis Themes
   License: MIT 
 
@@ -197,10 +197,6 @@ header {
 
 .theme-feature ul {
   margin: 5px 0 0 20px;
-}
-
-.theme-feature:nth-child(2) {
-  grid-area: 1 / 1;
 }
 
 @media (max-width: 960px) {

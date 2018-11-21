@@ -60,10 +60,6 @@
   ul { margin: 5px 0 0 20px; }
 }
 
-.theme-feature:nth-child(2) {
-  grid-area: 1 / 1;
-}
-
 @media (max-width: 960px) {
   .theme-features {
     display: block;
