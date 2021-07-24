@@ -1,0 +1,24 @@
+<header class="site-header">
+  <a class="site-branding" href="/">
+    <img class="site-logo" src="/assets/images/branding/gt-logo.svg" />
+    <span class="site-name">Gratis<span>Themes</span></span>
+  </a>
+
+  <nav class="site-nav">
+    <ul class="menu">
+      <li class="menu__item{{#isEqual page 'home'}} is-active{{/isEqual}}"><a href="/">Home</a></li>
+      <li class="menu__item has-children{{#isEqual page 'themes'}} is-active{{/isEqual}}">
+        <a href="/themes">Themes</a>
+        <ul>
+          <li><a href="/themes/bidnis">Bidnis</a></li>
+          <li><a href="/themes/fell">Fell</a></li>
+          <li><a href="/themes/herschel">Herschel</a></li>
+          <li><a href="/themes/ruffie">Ruffie</a></li>
+          <li><a href="/themes/siggen">Siggen</a></li>
+          <li><a href="/themes/reginald">Reginald</a></li>
+        </ul>
+      </li>
+      <li class="menu__item{{#isEqual page 'about'}} is-active{{/isEqual}}"><a href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>

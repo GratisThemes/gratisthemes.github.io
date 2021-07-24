@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+.site-container > * {
+  padding: 1em;
+  animation-name: transitionUp;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@media (min-width: 83em) {
+  .site-container > * {
+    padding-inline: calc((100% - 80em) / 2);
+  }
+}

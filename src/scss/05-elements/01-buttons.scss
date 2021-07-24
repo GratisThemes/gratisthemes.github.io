@@ -1,0 +1,39 @@
+.cta {
+  background-color: var(--color-gray);
+  display: block;
+  border-radius: var(--border-radius);
+  padding: 0.75em 3em;
+  width: 6em;
+  text-align: center;
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    transform: translateY(-0.25em);
+  }
+
+  &-primary {
+    background-color: var(--color-orange);
+  }
+}
+
+.view-all-cta {
+  display: block;
+  background-color: var(--color-orange);
+  width: 8em;
+  white-space: nowrap;
+  margin-inline: auto;
+  margin-block-end: 4em;
+  box-shadow: var(--shadow--small);
+}
+
+@media (min-width: 48em) {
+  .view-all-cta {
+    font-size: 2rem;
+  }
+}

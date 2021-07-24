@@ -1,0 +1,61 @@
+.hero {
+  position: relative;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  padding: 2em 1em;
+  overflow: visible;
+
+  &::after {
+    background-color: var(--color-black);
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4em;
+    left: 0;
+    inset-block-end: -1em;
+    transform: skewY(1deg);
+    z-index: -1;
+  }
+  
+  &__text {
+    margin: 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+
+    span {
+      display: inline-block;
+      color: var(--color-orange);
+    }
+  }
+}
+
+@media (min-width: 28em) {
+  .hero {
+    &__text {
+      font-size: 3rem;
+      max-width: 20em;
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .hero {
+    padding-block: 6em;
+
+    &__text {
+      font-size: 4rem;
+      max-width: 14em;
+    }
+  }
+}
+
+@media (min-width: 83em) {
+  .hero {
+    &__text {
+      font-size: 5rem;
+    }
+  }
+}

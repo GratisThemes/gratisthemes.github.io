@@ -1,0 +1,26 @@
+.theme-footer {
+  padding-block: 2em 6em;
+  background-color: var(--color-white);
+  text-align: center;
+
+  &__heading {
+    font-size: 2rem;
+  }
+
+  .cta-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 48em) {
+  .theme-footer {
+    padding-block: 6em 10em;
+
+    &__heading {
+      font-size: 4rem;
+    }
+  }
+}

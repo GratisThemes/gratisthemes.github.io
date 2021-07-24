@@ -1,0 +1,21 @@
+.about {
+  margin-bottom: 8em;
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  &__content {
+    p {
+      max-width: 84ch;
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .about {
+    h1 {
+      font-size: 7rem;
+    }
+  }
+}

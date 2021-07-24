@@ -1,0 +1,10 @@
+.theme-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  justify-content: start;
+  gap: 0.5em 1em;
+
+  &__label {
+    font-weight: 700;
+  }
+}

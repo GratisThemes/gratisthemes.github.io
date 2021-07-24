@@ -1,0 +1,145 @@
+.site-header {
+  background-color: var(--color-baige);
+  display: grid;
+  grid-template-columns: minmax(2em, auto) minmax(0, 100%);
+  padding-block: 2em;
+  gap: 1em;
+  animation-name: transitionDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.site-branding {
+  align-self: end;
+  color: var(--color-black);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.site-name {
+  display: none;
+  font-weight: 600;
+  line-height: 0.75;
+
+  span {
+    color: var(--color-orange);
+  }
+}
+
+.site-nav {
+  justify-self: end;
+
+  > * + * {
+    margin-left: 1em;
+  }
+
+  a {
+    color: var(--color-black);
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  
+  &__item {
+    position: relative;
+
+    &.is-active {
+      color: var(--color-orange);
+      
+      > a {
+        color: var(--color-orange);
+      }
+    }
+    
+    &.has-children {
+      ul {
+        display: none;
+        position: absolute;
+        background-color: var(--color-baige);
+        top: 100%;
+        margin-inline-start: -50%;
+        text-align: center;
+        padding: 1em 3em;
+        gap: 1em;
+        z-index: 10;
+        font-weight: 400;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow--small);
+        white-space: nowrap;
+
+        li + li {
+          margin-block-start: 1em;
+        }
+
+        a {
+          font-weight: 400;
+        }
+      }
+
+      &:hover ul {
+        display: block;
+      }
+    }
+
+    &.has-children > a::after {
+      position: relative;
+      border-style: solid;
+      border-width: 0.15em 0.15em 0 0;
+      content: '';
+      display: inline-block;
+      height: 0.35em;
+      width: 0.35em;
+      margin-inline-start: 0.5em;
+      inset-block-end: 0.65em;
+      vertical-align: bottom;
+      transform: rotate(135deg);
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: var(--color-orange);
+  }
+}
+
+@media (min-width: 32em) {
+  .site-header {
+    grid-template-columns: minmax(3em, auto) minmax(0, 100%);
+    gap: 0.5em;
+  }
+
+  .site-branding {
+    display: flex;
+    white-space: nowrap;
+    gap: 0.5em;
+  }
+
+  .site-logo {
+    max-width: 3em;
+  }
+
+  .site-name {
+    display: inline-block;
+    align-self: flex-end;
+  }
+
+  .menu {
+    display: flex;
+    gap: 3em;
+
+    &__item {
+      position: relative;
+    }
+  }
+}

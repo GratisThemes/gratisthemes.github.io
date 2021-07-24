@@ -1,0 +1,37 @@
+<section class="theme-info">
+  <h1 class="theme-info__heading">{{heading}}</h1>
+
+  <h2 class="theme-info__sub-heading">{{subHeading}}</h2>
+
+  <p class="theme-info__description">{{description}}</p>
+
+  <img class="theme-info__screenshot" src="/assets/images/themes/{{slug}}/thumbnail.jpg" />
+
+  <div class="theme-info__meta theme-meta">
+    <span class="theme-meta__label">Version</span><span class="theme-meta__version">{{version}}</span>
+    <span class="theme-meta__label">Last update</span><span class="theme-meta__updated">{{updated}}</span>
+    <span class="theme-meta__label">Downloads</span><span class="theme-meta__downloads">{{downloads}}</span>
+    <span class="theme-meta__label">Requirements</span><span class="theme-meta__requirements">{{requirements}}</span>
+    <span class="theme-meta__label">License</span><span class="theme-meta__license">{{license}}</span>
+  </div>
+
+  <div class="cta-wrapper">
+    <a class="cta cta-primary" href="https://wordpress.org/themes/{{slug}}">Download</a>
+    <a class="cta cta-secondary" href="https://wp-themes.com/{{slug}}/">Demo</a>
+  </div>
+</section>
+
+<script type="text/javascript">
+  const meta          = document.querySelector('.theme-meta')
+  const metaVersion   = meta.querySelector('.theme-meta__version')
+  const metaUpdated   = meta.querySelector('.theme-meta__updated')
+  const metaDownloads = meta.querySelector('.theme-meta__downloads')
+
+  fetch('https://api.wordpress.org/themes/info/1.1/?action=theme_information&request[slug]={{slug}}')
+    .then(res => res.json())
+    .then(data => {
+      metaVersion.innerHTML   = data.version
+      metaUpdated.innerHTML   = data.last_updated
+      metaDownloads.innerHTML = parseInt(data.downloaded) >= 1000 ? parseInt(data.downloaded / 1000) + ',000+' : data.downloaded.toLocaleString()
+    })
+</script>

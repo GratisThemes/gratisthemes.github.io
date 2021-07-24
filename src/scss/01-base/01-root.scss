@@ -1,0 +1,52 @@
+:root {
+  --color-white:  #FFFFFF;
+  --color-light-gray: #D1CAC6;
+  --color-gray:   #3A3836;
+  --color-black:  #3A3836;
+  --color-orange: #D37433;
+  --color-baige:  #FFF7E5;
+
+  --font-family: 'Poppins', sans-serif;
+  --font-size: 1rem;
+  --font-style: normal;
+
+  --border-width:  0.0625em;
+  --border-style:  solid;
+  --border-color:  var(--color-black);
+  --border-radius: 0.25em;
+
+  --background-color:  var(--color-white);
+  --text-color:        var(--color-black);
+  --anchor-color:      var(--color-orange);
+
+  --shadow: 0 0.128em 1em var(--color-light-gray);
+  --shadow--small: 0 0.128em 0.25em var(--color-light-gray);
+}
+
+@keyframes transitionDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10em);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes transitionUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10em);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

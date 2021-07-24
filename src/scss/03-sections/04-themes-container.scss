@@ -1,0 +1,17 @@
+.themes-container {
+  padding: 5em 0;
+
+  .card + .card {
+    margin-block-start: 2em;
+  }
+}
+
+@media (min-width: 48em) {
+  .themes-container {
+    padding: 8em 0;
+
+    .card + .card {
+      margin-block-start: 6em;
+    }
+  }  
+}
