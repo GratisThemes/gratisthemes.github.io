@@ -83,7 +83,7 @@
       display: inline-block;
       grid-row: 5;
       margin: 0;
-      grid-column: 2;
+      grid-column: 1;
     }
 
     .cta + .cta {
@@ -91,7 +91,7 @@
     }
 
     .cta-primary {
-      grid-column: 1;
+      grid-column: 2;
     }
 
     &:nth-child(even) {
@@ -113,13 +113,14 @@
       }
 
       .cta {
-        grid-column: 4;
+        grid-column: 3;
       }
 
       .cta-primary {
-        grid-column: 3;
+        grid-column: 4;
       }
     }
+
   }
 }
 
